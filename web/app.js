@@ -9,7 +9,7 @@ devices.forEach(function (device) {
   );
 });
 
-const api = 'http://localhost:4000';
+const api = 'https://api-822h.onrender.com';
 
 
 $.get(`${api}/light`)
