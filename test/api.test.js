@@ -1,5 +1,5 @@
 const axios = require('axios');
-API_URL="http://localhost:4000";
+API_URL="https://api-822h.onrender.com";
 
 test('test light array', () => {
     expect.assertions(1);
