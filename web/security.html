@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+       body {
+          height: 100vh;
+          justify-content: center;
+          align-items: center;
+          background-image: url('https://images.alphacoders.com/276/276463.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+
+        .wrapper {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin: auto;
+          margin-top: 10%;
+          max-width: 600px;
+          align-items: center;
+        }
+
+        .container {
+          max-width: 600px;
+          width: 100%;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .title {
+          text-align: center;
+          color: #333;
+        }
+
+        .control-panel {
+          background-color: #f2f2f2;
+          border: 1px solid #ddd;
+          padding: 20px;
+        }
+
+        .control-group {
+          margin-bottom: 20px;
+        }
+
+        .control-title {
+          margin: 0;
+          font-size: 16px;
+        }
+
+        .control-input {
+          display: none;
+        }
+
+        .control-dropdown {
+          display: block;
+          margin-top: 5px;
+          width: 100%;
+        }
+
+        .control-color {
+          display: block;
+          margin-top: 5px;
+          width: 100%;
+        }
+
+        .submit-button {
+          display: block;
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #333;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+        .submit-button:hover{
+            color: #333;
+            background-color: #fff;
+        }
+
+        header{
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+nav ul {
+display: flex;
+justify-content: space-between;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 10px 20px;
+}
+
+nav li {
+font-size: 18px;
+font-weight: bold;
+padding: 0 10px;
+}
+
+nav li:first-child {
+font-size: 24px;
+color: #333;
+margin-right: auto;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+}
+nav li a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.active{
+  background-color: #333;
+  color: #fff;
+}
+
+    </style>
+</head>
+<header>Smart Building Security Controls</header>
+<nav>
+  <ul>
+    <li> <a href="/main">Smart Building</a>  </li>
+    <li><a href="/lighting">Smart Lightning</a></li>
+    <li><a href="/ac">Smart Ac</a></li>
+    <li><a class="active" href="/security">Smart Security</a></li>
+    <li><a href="/add">Add Devices</a></li>
+    <li><a href="/delete">Delete Devices</a></li>
+    <li><a href="/show">Show Devices</a></li>
+    <li><a href="/chart">Chart</a></li>
+  </ul>
+</nav>
+<body>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="title">Security Controls</h2>
+        <div class="control-panel">
+          <div class="control-group">
+            <h3 class="control-title">Door 1</h3>
+            <select class="control-dropdown" id="door1">
+              <option value="locked">Locked</option>
+              <option value="unlocked">Unlocked</option>
+            </select>
+            <span id="door1state"></span>
+          </div>
+  
+          <div class="control-group">
+            <h3 class="control-title">Door 2</h3>
+            <select class="control-dropdown" id="door2">
+              <option value="locked">Locked</option>
+              <option value="unlocked">Unlocked</option>
+            </select>
+            <span id="door2state"></span>
+          </div>
+  
+          <div class="control-group">
+            <h3 class="control-title">Window 1</h3>
+            <select class="control-dropdown" id="window1">
+              <option value="closed">Closed</option>
+              <option value="open">Open</option>
+            </select>
+            <span id="window1state"></span>
+        </div>
+    </div>
+    <button class="submit-button" id="subsec">Submit</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</html>

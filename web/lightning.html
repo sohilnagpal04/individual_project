@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+
+      }
+       body {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url('https://images.alphacoders.com/276/276463.jpg');
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin: auto ;
+  margin-top:5% ;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.control-panel {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.control-input {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.control-color {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.submit-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.submit-button:hover{
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+nav ul {
+display: flex;
+justify-content: space-between;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 10px 20px;
+}
+
+nav li {
+font-size: 18px;
+font-weight: bold;
+padding: 0 10px;
+}
+
+nav li:first-child {
+font-size: 24px;
+color: #333;
+margin-right: auto;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+}
+nav li a:hover {
+    color: #fff;
+    background-color: #333;
+}
+.active{
+  background-color: #333;
+  color: #fff;
+}
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+tr{
+  background-color: #ddd;
+}
+
+
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+
+    </style>
+</head>
+
+<header>
+  Smart Building Light Controls
+</header>
+<nav>
+  <ul>
+    <li> <a href="/main">Smart Building</a>  </li>
+    <li><a class="active" href="/lighting">Smart Lightning</a></li>
+    <li><a href="/ac">Smart Ac</a></li>
+    <li><a href="/security">Smart Security</a></li>
+    <li><a href="/add">Add Devices</a></li>
+
+    <li><a href="/delete">Delete Devices</a></li>
+    <li><a href="/show">Show Devices</a></li>
+    <li><a href="/chart">Chart</a></li>
+
+  </ul>
+</nav>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Light</th>
+        <th>Brightness</th>
+        <th>Color</th>
+      </tr>
+    </thead>
+    <tbody id="lbody">
+      
+    </tbody>
+  </table>
+  <div class="wrapper">
+    <div class="container">
+      <h2 class="title">Light Controls</h2>
+      <div class="control-panel">
+        <div class="control-group">
+          <h3 class="control-title">Light 1</h3>
+          <label for="light1-dropdown">Value: </label>
+          <select class="control-dropdown" id="light1-dropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <input type="color" class="control-color" value="#ffffff" id="light1-color">
+          <button class="submit-button" id="submit-light1">Submit</button>
+        </div>
+        <div class="control-group">
+          <h3 class="control-title">Light 2</h3>
+          <label for="light2-dropdown">Value: </label>
+          <select class="control-dropdown" id="light2-dropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <input type="color" class="control-color" value="#ffffff" id="light2-color">
+          <button class="submit-button" id="submit-light2">Submit</button>
+        </div>
+  
+        <div class="control-group">
+          <h3 class="control-title">Light 3</h3>
+          <label for="light3-dropdown">Value: </label>
+          <select class="control-dropdown" id="light3-dropdown">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <input type="color" class="control-color" value="#ffffff" id="light3-color">
+          <button class="submit-button" id="submit-light3">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>  
+<script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</html>

@@ -1,0 +1,8 @@
+[
+    {
+        "id":1,
+        "temperature": 10,
+        "fanSpeed": 2,
+        "mode": "cool"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "light1": 1,
+        "brightness": 50,
+        "color": "#ffffff"
+    },
+    {
+        "light2": 2,
+        "brightness": 50,
+        "color": "#ffffff"
+    },
+    {
+        "light": 3,
+        "brightness": 50,
+        "color": "#ffffff"
+    }
+]

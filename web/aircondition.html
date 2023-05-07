@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+       body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.alphacoders.com/276/276463.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 10%;
+  max-width: 600px;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.control-panel {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.control-group {
+  margin-bottom: 20px;
+}
+
+.control-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.control-input {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.active{
+  background-color: #333;
+  color: #fff;
+}
+
+.submit-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.submit-button:hover{
+    color: #333;
+    background-color: #fff;
+}
+header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+background-color: #fff;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+position: sticky;
+top: 0;
+z-index: 1;
+}
+
+nav ul {
+display: flex;
+justify-content: space-between;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 10px 20px;
+}
+
+nav li {
+font-size: 18px;
+font-weight: bold;
+padding: 0 10px;
+}
+
+nav li:first-child {
+font-size: 24px;
+color: #333;
+margin-right: auto;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 15px;
+}
+nav li a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+    </style>
+</head>
+
+<body>
+  <header>Smart Building Ac Controls</header>
+  <nav>
+    <ul>
+      <li> <a href="/main">Smart Building</a>  </li>
+      <li><a href="/lighting">Smart Lightning</a></li>
+      <li><a class="active" href="/ac">Smart Ac</a></li>
+      <li><a href="/security">Smart Security</a></li>
+      <li><a href="/add">Add Devices</a></li>
+      <li><a href="/delete">Delete Devices</a></li>
+      <li><a href="/show">Show Devices</a></li>
+      <li><a href="/chart">Chart</a></li>
+    </ul>
+  </nav>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="title">AC Controls</h2>
+        <div class="control-panel">
+          <div class="control-group">
+            <h3 class="control-title">Temperature</h3>
+            <input type="number" name="temperature"  min="16" max="30"  value="24" class="control-input " id="temprature">
+            <p>Current Temperature: <span id="current-temp"></span> &deg;C</p>
+          </div>
+  
+          <div class="control-group">
+            <h3 class="control-title">Fan Speed</h3>
+            <input type="number" min="1" max="3" value="2" class="control-input" id="fanSpeed">
+            <p>Current Fan Speed: <span id="current-fan"></span></p>
+          </div>
+  
+          <div class="control-group">
+            <h3 class="control-title">Mode</h3>
+            <select class="control-input" id="mode-select">
+              <option value="cool">Cool</option>
+              <option value="heat">Heat</option>
+              <option value="dry">Dry</option>
+              <option value="fan">Fan</option>
+            </select>
+            <p>Current Mode: <span id="current-mode"></span></p>
+          </div>
+        </div>
+        <button class="submit-button" id="subac">Submit</button>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</html>
