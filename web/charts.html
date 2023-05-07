@@ -78,7 +78,7 @@ nav li a:hover {
     <div id="container"></div>
     <script>
         // Make API call to retrieve data
-        fetch('http://localhost:7000/sensor')
+        fetch('https://mqtt-tfuu.onrender.com/sensor')
             .then(response => response.json())
             .then(data => {
                 // Format the data for Highcharts
